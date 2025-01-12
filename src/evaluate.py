@@ -27,8 +27,8 @@ def evaluate(data_path, model_path):
     predictions = model.predict(x)
     accuracy = accuracy_score(y, predictions)
 
-    mlflow.log_etric("accuract", accuracy)
+    mlflow.log_metric("accuract", accuracy)
     print(f"Model accuracy: {accuracy}")
 
-if __name__ == "__main__":
+if __name__ =="__main__":
     evaluate(data_path= params["data"], model_path= params["model"])
